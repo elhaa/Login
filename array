@@ -1,0 +1,30 @@
+import React, {Component} from 'react';
+import {TouchableOpacity,View,Text} from 'react-native';
+
+
+export default class App extends Component {
+    constructor(state){
+        super(state);
+        this.state={
+            angka: ['semangka','Jambu','melon'],
+            hewan:[
+                {name:'El Muflihatuz Zahra'},
+                {date:'06 Desember 2002',
+                 row:'Apa pun itu',
+                 fuh:'auk ah'}
+            ]
+        }
+    }
+    render(){
+        return(
+        
+            <View>
+            <TouchableOpacity>
+            <Text>Buah Favorit:{this.state.angka[1]}</Text>
+            <Text>Tanggal Lahir:{this.state.hewan[1].fuh}</Text>
+            </TouchableOpacity>
+            </View>
+
+        )
+    }
+}
